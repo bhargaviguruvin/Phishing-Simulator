@@ -1,0 +1,101 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="text-center">
+
+<div class="alert alert-danger shadow">
+
+<h1>⚠️ You Fell for a Simulated Phishing Attack!</h1>
+
+<p class="lead">
+
+This was a cybersecurity awareness simulation.
+
+No real credentials were stored.
+
+</p>
+
+</div>
+
+</div>
+
+<div class="card shadow mt-4">
+
+<div class="card-header bg-success text-white">
+
+<h3>🚩 Red Flags You Should Have Noticed</h3>
+
+</div>
+
+<div class="card-body">
+
+<ul class="list-group">
+
+<li class="list-group-item">
+🚩 The sender's email address looked suspicious.
+</li>
+
+<li class="list-group-item">
+🚩 The email created urgency ("Verify immediately").
+</li>
+
+<li class="list-group-item">
+🚩 The link may not have matched the real website.
+</li>
+
+<li class="list-group-item">
+🚩 Unexpected request for login credentials.
+</li>
+
+<li class="list-group-item">
+🚩 Generic greeting instead of your actual name.
+</li>
+
+</ul>
+
+</div>
+
+</div>
+
+<div class="card shadow mt-4">
+
+<div class="card-header bg-primary text-white">
+
+<h3>🛡️ How to Stay Safe</h3>
+
+</div>
+
+<div class="card-body">
+
+<ul>
+
+<li>Always verify the sender's email address.</li>
+
+<li>Hover over links before clicking them.</li>
+
+<li>Never share passwords through email.</li>
+
+<li>Enable Multi-Factor Authentication (MFA).</li>
+
+<li>Report suspicious emails to your IT team.</li>
+
+<li>Keep your browser and antivirus updated.</li>
+
+</ul>
+
+</div>
+
+</div>
+
+<div class="text-center mt-4">
+
+<a href="{{ url_for('index') }}" class="btn btn-success btn-lg">
+
+🏠 Back to Home
+
+</a>
+
+</div>
+
+{% endblock %}

@@ -1,0 +1,85 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<h2 class="mb-4">📊 Simulation Report</h2>
+
+{% if data %}
+
+<div class="table-responsive">
+
+<table class="table table-bordered table-hover shadow">
+
+<thead class="table-dark">
+
+<tr>
+
+<th>ID</th>
+
+<th>Username</th>
+
+<th>Action</th>
+
+<th>Website</th>
+
+<th>Time</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+
+{% for row in data %}
+
+<tr>
+
+<td>{{ row[0] }}</td>
+
+<td>{{ row[1] }}</td>
+
+<td>
+
+<span class="badge bg-danger">
+
+{{ row[2] }}
+
+</span>
+
+</td>
+
+<td>{{ row[3] }}</td>
+
+<td>{{ row[4] }}</td>
+
+</tr>
+
+{% endfor %}
+
+</tbody>
+
+</table>
+
+</div>
+
+<div class="mt-3">
+
+<a href="{{ url_for('reset') }}" class="btn btn-danger">
+
+🗑 Reset Database
+
+</a>
+
+</div>
+
+{% else %}
+
+<div class="alert alert-info">
+
+No simulation records available.
+
+</div>
+
+{% endif %}
+
+{% endblock %}

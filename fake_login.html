@@ -1,0 +1,75 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="container mt-5">
+    <div class="row justify-content-center">
+
+        <div class="col-md-5">
+
+            <div class="card shadow">
+
+                <div class="card-header bg-primary text-white text-center">
+                    <h3>{{ site }} Login</h3>
+                </div>
+
+                <div class="card-body">
+
+                    <p class="text-center text-muted">
+                        Sign in to continue
+                    </p>
+
+                    <form action="{{ url_for('submit') }}" method="POST">
+
+                        <input type="hidden" name="site" value="{{ site }}">
+
+                        <div class="mb-3">
+                            <label class="form-label">Email / Username</label>
+
+                            <input
+                                type="text"
+                                class="form-control"
+                                name="username"
+                                placeholder="Enter your email"
+                                required>
+                        </div>
+
+                        <div class="mb-3">
+                            <label class="form-label">Password</label>
+
+                            <input
+                                type="password"
+                                class="form-control"
+                                name="password"
+                                placeholder="Enter your password"
+                                required>
+                        </div>
+
+                        <button
+                            type="submit"
+                            class="btn btn-primary w-100">
+
+                            Login
+
+                        </button>
+
+                    </form>
+
+                </div>
+
+                <div class="card-footer text-center text-muted">
+
+                    <small>
+                        ⚠️ This is a cybersecurity awareness simulation.
+                    </small>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+</div>
+
+{% endblock %}

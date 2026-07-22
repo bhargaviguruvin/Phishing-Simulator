@@ -1,0 +1,7 @@
+console.log("PhishGuard AI Loaded Successfully!");
+
+document.addEventListener("DOMContentLoaded", () => {
+
+console.log("Cybersecurity Awareness Simulator Ready");
+
+});
