@@ -19,3 +19,9 @@ A Flask-based phishing awareness and training simulator.
 - HTML
 - CSS
 - JavaScript
+
+
+
+##Contributors
+-Pramita Shetty
+-Bhargavi Guruvin
